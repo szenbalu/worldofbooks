@@ -1,0 +1,378 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: #FFF;
+    margin: 0;
+    padding: 0;
+    color: #a1a1a1;
+}
+h2{
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 40px 0 35px 0;
+    text-align: center;
+}
+.row{
+    margin-left: 0;
+    margin-right: 0;
+}
+.bold{
+    font-weight: bold;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+
+#wb-leftMenu{
+    position: relative;
+    border-radius: 0;
+    color: #FFFFFF;
+    max-width: 375px;
+    min-height: 100%;
+    width: 100%;
+    background-color: #31425c;
+    float: left;
+}
+#wb-leftMenu > div{
+    width: 100%;
+}
+#wb-leftMenu .left{
+    width: 62px;
+    text-align: center;
+    float: left;
+}
+#wb-leftMenu .right{
+    width: 80%;
+    width: calc(100% - 62px);
+    float: left;
+}
+#wb-leftMenu .logo{
+    padding: 20px 0 40px 0; 
+    font-size: 24px;
+    float: left;
+}
+#wb-leftMenu .logo .picture{
+    width: 62px;
+}
+#wb-leftMenu .profile{
+    padding-bottom: 30px;
+    float: right;
+}
+#wb-leftMenu .profile .userName{
+    font-size: 18px;
+}
+#wb-leftMenu .profile .profileType{
+    font-size: 11px;
+}
+#wb-leftMenu ul{
+    padding: 0 0 50px 0;
+    list-style: none;
+    font-size: 14px;
+    float: left;
+}
+#wb-leftMenu ul li{
+    font-weight: bold;
+}
+#wb-leftMenu ul.menu{
+}
+#wb-leftMenu ul.menu li{
+    width: 280px;
+    float: left;
+}
+#wb-leftMenu ul.menu li .left{
+    padding: 10px 0;
+}
+#wb-leftMenu ul.menu li .right{
+    padding: 10px 0;
+    border-bottom: 1px solid #4a5970;
+}
+#wb-leftMenu .quickLinks{
+    width: calc(100% - 62px);
+    margin-left: 62px;
+    float: left;
+}
+#wb-leftMenu .quickLinksTitle{
+    padding: 0 0 10px 0;
+    font-size: 11px;
+}
+#wb-leftMenu ul.quickLinksList{
+}
+#wb-leftMenu ul.quickLinksList li{
+    padding: 10px 0;
+}
+#wb-leftMenu {
+    float: left;
+}
+#wb-leftMenu .allrights{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 11px;
+    text-align: right;
+    padding: 10px;
+    float: left;
+}
+
+#vue-app{
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    float: left;
+    background-color: #31425c;
+}
+#wb-right{
+    background-color: #FFF;
+    width: calc(100% - 375px);
+    float: left;
+}
+#wb-mainContainer{
+    max-width: 1170px;
+}
+.container,
+.container-fluid{
+  padding:0;
+  margin:0;
+}
+#header{
+    width: calc(100% - 375px);
+    left: 375px;
+    padding: 0;
+    font-size: 11px;
+    text-transform: uppercase;
+    display: flex;
+    background-color: #FFF;
+}
+#header .collapse.navbar-collapse{
+    justify-content: space-between;
+}
+#header > div{
+    width: 100%;
+    display: flex;
+}
+#wb-search{
+    background: url('../kepek/search.png') no-repeat 5px center;
+    padding-left: 35px;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    background-color: #FFF;
+    border-bottom: 1px solid #e0e0e0;
+    line-height: 50px;
+    height: 50px;
+    width: auto;
+    width: calc(100% - 480px);
+    min-width: 40%;
+    overflow: hidden;
+}
+#header .right-group{
+    display: flex;
+    max-width: 480px;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #e0e0e0;
+}
+#wb-account{
+    position: relative;
+    cursor: pointer;
+    padding-left: 10px;
+    line-height: 50px;
+    justify-content: flex-start;
+    display: flex;
+    background-color: #FFF;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    max-width: 320px;
+    width: 100%;
+}
+#wb-account .angleDown{
+    font-size: 24px;
+    position: absolute;
+    top: 25%;
+    right: 15px;
+}
+#wb-notification{
+    background: url('../kepek/notification.png') no-repeat center center;
+}
+#wb-addNew{
+    background: url('../kepek/add.png') no-repeat center center;
+}
+#wb-exit{
+    background: url('../kepek/exit.png') no-repeat center center;
+}
+#wb-notification,
+#wb-addNew,
+#wb-exit{
+    cursor: pointer;
+    justify-content: flex-end;
+    display: flex;
+    background-color: #FFF;
+    min-width: 50px;
+    width: 50px;
+    height: 50px;
+    color: #9d9d9d;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: center;
+}
+#wb-notification .notifications{
+    position: relative;
+    color: #FFFFFF;
+    background-color: #199ed9;
+    border-radius: 50%;
+    bottom: -30px;
+    width: 15px;
+    height: 15px;
+    left: -5px;
+}
+#wb-addNew{
+    background-color: #a8cda7;
+    color: #FFF;
+}
+
+#wb-accountInfo{
+    background-color: #f6f6f6;
+    border-bottom: 1px solid #e0e0e0;
+}
+#wb-stepIndicator{
+    text-align: center;   
+}
+#wb-stepIndicator li{
+    color: #a1a1a1;
+    font-size: 14px;
+    display: table-cell;
+    position: relative;
+    width: 1%;
+}
+#wb-stepIndicator li:after{
+    background-color: #cbe1ef;
+    content: "";
+    display: block;
+    height: 1px;
+    position: absolute;
+    width: 100%;
+    top: 32px;
+    left: 50%;
+}
+#wb-stepIndicator li:last-child:after{
+    width: 0;
+}
+#wb-stepIndicator li:after{
+}
+#wb-stepIndicator li .caption{
+    max-width: 150px;
+    margin: 0 auto;
+}
+#wb-stepIndicator li .step{
+    content: "";
+    display: block;
+    position: relative;
+    background-color: #f6f6f6;
+    margin: 0 auto; 
+    line-height: 65px;
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    z-index: 1;
+}
+#wb-stepIndicator li .step .inner{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 3px solid #FFF; 
+    background-color: #199ed9;
+    position: relative;
+    top: 5px;
+    left: 5px;
+}
+#wb-stepIndicator li.active .step .inner{
+    background: #a8cda7 url('../kepek/ticker.png') no-repeat center center;
+}
+
+#wb-graphs{
+    border-bottom: 1px solid #e0e0e0;
+}
+#wb-inventory h2{
+    text-align: center;
+}
+
+#wb-soldItems{
+    border-bottom: 1px solid #e0e0e0;
+}
+#wb-soldItems h2{
+    text-align: left;
+    padding-left: 20px;
+}
+#wb-soldItems .wb-soldItemsContainer{
+}
+#wb-soldItems .wb-soldItemsContainer .oneItem{
+    justify-content: space-between;
+    border-bottom: 1px solid #e9e9e9; 
+}
+#wb-soldItems .wb-soldItemsContainer .oneItem .userId{
+    display: flex;
+    
+}
+#wb-soldItems .wb-soldItemsContainer .oneItem .itemId{
+    display: flex;
+}
+#wb-soldItems .wb-soldItemsContainer .oneItem .description{
+    display: flex;
+}
+
+#wb-userPerformance{
+    margin-bottom: 50px;
+}
+#wb-userPerformance .persons{
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+    display: flex;
+    list-style: none;
+    -webkit-flex-flow: row wrap;
+}
+
+#wb-userPerformance .persons .onePerson{
+    width: 115px;
+    text-align: center;
+}
+
+#wb-userPerformance .persons .onePerson .userName{
+    color: #a1a1a1;
+}
+#wb-userPerformance .persons .onePerson .itemsListed a{
+    color: #a8cda7;
+}
+
+#wb-userPerformance .persons .onePerson .profilePicture{
+    width: 75px;
+    height: 75px;
+}
+footer{
+    border-top: 1px solid #e0e0e0;
+}
+ul#wb-footerMenu{
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px 0;
+    float: left;
+}
+ul#wb-footerMenu li{
+    padding: 0 20px;
+    float: left;
+}
+
+
+@media (min-width: 768px) {
+    .container,
+    .container-fluid{
+      padding:0;
+      margin:0;
+    }
+    #vue-app{
+    padding-right: 0;
+    padding-left: 0;
+    }
+    #header{
+        padding-right: 0;
+        padding-left: 0;
+    }
+}

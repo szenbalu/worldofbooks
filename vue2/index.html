@@ -1,0 +1,243 @@
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script
+  		src="https://code.jquery.com/jquery-3.3.1.min.js"
+  		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  		crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<link href="style.css" rel="stylesheet" />
+	
+	<script src="https://unpkg.com/vue"></script>
+    <script src='https://unpkg.com/vue-chartjs@2.6.0/dist/vue-chartjs.full.min.js'></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+    <!--
+		https://jsonplaceholder.typicode.com/
+
+		A sold item részt a /albums url-el töltsd fel,
+		a user performance-t a /users-el,
+		a user-ek képeit a /photos-ból szedd.
+
+		A chart adatait egy általad össze állított tömb-ből töltsd fel.
+		A bal oldali menü kisebb felbontáson bezáródik.
+    -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+	<div id="vue-app" class="container-fluid">
+		<nav id="wb-leftMenu" class="navbar-toggler navbar-toggler-right hidden-lg-up">
+			<div class="logo">
+				<div class="left picture">
+					<img src="../kepek/logo.png" alt="Rapidlisting logo"/>
+				</div>
+				<div class="right">
+					<span class="bold">RAPID</span>LISTING
+				</div>
+			</div>
+			
+			<div class="right profile">
+				<div class="userName">János <span class="uppercase">SZABÓ</span></div>
+				<span class="profileType">account owner</span>
+			</div>
+
+			<ul class="menu">
+				<li>
+					<span class="left">
+						<img src="../kepek/dashboard.png" alt="Dashboard"/>
+					</span>
+					<span class="right">
+						DASHBOARD
+					</span>
+				</li>
+				<li>
+					<span class="left">
+						<img src="../kepek/inventory.png" alt="Inventory"/>
+					</span>
+					<span class="right">
+						INVENTORY
+					</span>
+				</li>
+				<li>
+					<span class="left">
+						<img src="../kepek/listings.png" alt="Listings"/>
+					</span>
+					<span class="right">
+						LISTINGS
+					</span>
+				</li>
+				<li>
+					<span class="left">
+						<img src="../kepek/images.png" alt="Images"/>
+					</span>
+					<span class="right">
+						IMAGES
+					</span>
+				</li>
+				<li>
+					<span class="left">
+						<img src="../kepek/settings.png" alt="Settings"/>
+					</span>
+					<span class="right">
+						SETTINGS
+					</span>
+				</li>
+			</ul>
+
+			<div class="quickLinks">
+				<div class="quickLinksTitle">QUICK LINKS</div>
+				<ul class="quickLinksList">
+					<li>
+						ADD NEW ITEM
+					</li>
+					<li>
+						CREATE NEW LISTING
+					</li>
+				</ul>
+			</div>
+
+			<div class="allrights">
+				All rights reserved for World of Books Lts. 2017
+			</div>
+		</nav>
+
+		<div id="wb-right">
+			<nav id="header" class="navbar navbar-toggleable-md fixed-top pt-md-0">
+				
+				<div class="collapse navbar-collapse">
+					<div id="wb-search" class="navbar-nav mr-auto">
+						Search in rapidlisting
+					</div>
+					<div class="right-group col-xs-5">
+						<div id="wb-account" class="col-xs-5">
+							Account
+							<span class="angleDown">
+								<i class="fas fa-angle-down"></i>
+							</span>
+						</div>
+						<div id="wb-notification">
+							<span class="notifications">
+								9
+								<span class="counter">
+								</span>
+							</span>
+						</div>
+						<div id="wb-addNew">
+						</div>
+						<div id="wb-exit">
+						</div>
+					</div>
+				</div>
+			</nav>
+
+			
+			<div id="wb-mainContainer" class="container-fluid pt-3">
+				<div id="wb-accountInfo">
+					<h2>Your account is not yet complete</h2>
+					<ol id="wb-stepIndicator">
+						<li class="active">
+							<div class="step">
+								<div class="inner">
+								</div>
+							</div>
+							<div class="caption hidden-xs hidden-sm">
+								<span>Set up your companies account data</span>
+							</div>
+						</li>
+						<li class="active">
+							<div class="step">
+								<div class="inner">
+								</div>
+							</div>
+							<div class="caption hidden-xs hidden-sm">
+								<span>Join an eBay account to your profile</span>
+							</div>
+						</li>
+						<li class="">
+							<div class="step">
+								<div class="inner">
+								</div>
+							</div>
+							<div class="caption hidden-xs hidden-sm">
+								<span>Invite your colleagues</span>
+							</div>
+						</li>
+						<li class="">
+							<div class="step">
+								<div class="inner">
+								</div>
+							</div>
+							<div class="caption hidden-xs hidden-sm">
+								<span>Create an inventory item</span>
+							</div>
+						</li>
+						<li class="">
+							<div class="step">
+								<div class="inner">
+								</div>
+							</div>
+							<div class="caption hidden-xs hidden-sm">
+								<span>List an item on eBay</span>
+							</div>
+						</li>
+					</ol>
+				</div>
+
+				<div id="wb-graphs" class="row">
+					<div id="wb-inventory" class="col-md-12 col-lg-4">
+						<h2>Inventory levels</h2>
+						<reactive :chart-data="datacollection"></reactive>
+					</div>
+					<div id="wb-statistics" class="col-md-12 col-lg-8">
+						<h2>Listing statistics</h2>
+					</div>
+				</div>
+
+				<div id="wb-soldItems">
+					<a name="listSoldItems" />
+					<h2>Sold items in last 24 hours</h2>
+					<div class="wb-soldItemsContainer" v-if="soldItems !== null">
+						<a class="col-1 offset-sm-5" href="#listSoldItems" v-on:click="rightFullList">see full list</a>
+						<div v-for="n in soldMax" class="oneItem row col-6">
+							<div class="userId col-sm-6">
+								{{ soldItems[n-1].title }}
+							</div>
+							<div class="itemId col-sm-3">
+								{{ soldItems[n-1].userId }}
+							</div>
+							<div class="description col-sm-3">
+								{{ n-1 }}
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="wb-userPerformance">
+					<h2>User performance</h2>
+					<div class="persons" v-if="usersPerformance !== null">
+						<div class="onePerson" v-for="(user, index) in usersPerformance">
+							<img class="profilePicture rounded-circle" :src="usersData[index].thumbnailUrl" />
+							<div class="userName">{{ user.name }}</div>
+							<div class="itemsListed"><a href="#"># items listed</a></div>
+						</div>
+					</div>
+				</div>
+				<footer>
+					<ul id="wb-footerMenu">
+						<li>Home</li>
+						<li>Privacy policy</li>
+						<li>Terms of Service</li>
+						<li>Help Center</li>
+					</ul>
+					<div id="wb-socialIcons">
+					</div>
+				</footer>
+			</div>
+		</div>
+	</div>
+
+	<script src="app.js"></script>
+</body>
+</html>
